@@ -1,7 +1,7 @@
 Laravel-Excel-Export
 ====================
 
-Simple Laravel Excel export package
+Simple Laravel Excel export package. This is just a simple wrapper for the Excel Export found on https://code.google.com/p/phpexportxlsclass/.
 
 
 Installation
