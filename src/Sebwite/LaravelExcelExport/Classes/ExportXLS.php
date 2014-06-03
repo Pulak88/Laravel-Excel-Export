@@ -147,7 +147,7 @@ class ExportXLS {
 
         $build = '';
 
-        foreach($array as $key=>$row) {
+        foreach($array as $key => $row) {
             $colNo = 0;
             foreach($row as $key2=>$field) {
                 if(is_numeric($field)) {
@@ -155,6 +155,9 @@ class ExportXLS {
                 }
                 else
                 {
+                    if(is_object($field))
+                        dd($field);
+
                     $build .= $this->textFormat($this->rowNo, $colNo, $field);
                 }
 

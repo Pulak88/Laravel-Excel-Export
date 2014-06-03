@@ -77,11 +77,15 @@ class ExcelExport {
     {
         // Check for multidimensional array
         if( ! (count($data) == count($data, COUNT_RECURSIVE)) ) {
-            foreach($data as $line) {
-                $this->xls->addRow($line);
-            }
-        } else {
+
+            // Not multi - just add the array
             $this->xls->addRow($data);
+        } else {
+
+            // Multidimensional array - loop through arrays
+            foreach($data as $line) {
+                $this->xls->addRow( $line );
+            }
         }
     }
 
