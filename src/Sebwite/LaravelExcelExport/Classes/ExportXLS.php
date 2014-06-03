@@ -71,13 +71,13 @@ class ExportXLS {
 
             #check for multi dim array
             if ( ! (count($row) == count($row, COUNT_RECURSIVE))) {
-                foreach($row as $key=>$array) {
-                    $this->bodyArray[] = $array;
-                }
+                $this->bodyArray[] = $row;
             }
             else
             {
-                $this->bodyArray[] = $row;
+                foreach($row as $key=>$array) {
+                    $this->bodyArray[] = $array;
+                }
             }
         }
         else
